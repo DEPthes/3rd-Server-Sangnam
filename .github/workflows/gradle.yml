@@ -35,6 +35,9 @@ jobs:
       with:
         gradle-home-cache: 6.ci-cd/cicd/.gradle
 
+    - name: Grant execute permission for Gradle Wrapper
+      run: chmod +x 6.ci-cd/cicd/gradlew
+      
     - name: Build with Gradle Wrapper
       run: ./gradlew build
       working-directory: 6.ci-cd/cicd
